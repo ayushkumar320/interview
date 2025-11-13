@@ -2,6 +2,7 @@
 
 import BlurText from "@/components/BlurText";
 import MagnetLines from "@/components/MagnetLines";
+import Link from "next/link";
 
 const handleAnimationComplete = () => {
   console.log("Animation completed!");
@@ -35,11 +36,29 @@ export default function Home() {
         />
       </div>
 
-      {/* Bottom Note (Optional) */}
+      {/* Redirect Button */}
+      <Link
+        href="/chatGemini"
+        className="
+          mt-8
+          px-6 py-3
+          rounded-xl
+          bg-blue-600 
+          hover:bg-blue-700 
+          transition 
+          text-white 
+          font-medium 
+          shadow-md 
+          hover:shadow-lg
+        "
+      >
+        Go to Gemini Chat →
+      </Link>
+
+      {/* Bottom Note */}
       <p className="mt-10 text-gray-400 text-sm">
         Built with Next.js, Tailwind, and Motion ⚡
       </p>
-
     </main>
   );
 }
